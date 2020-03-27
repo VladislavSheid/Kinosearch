@@ -1,0 +1,442 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body{
+  background: #0A090A;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('../img/main-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  
+}
+
+.container
+{
+ 
+  max-width: 1140px;
+  margin:auto;
+}
+.header
+{
+  display: flex;
+  /* display flex выравнивает все в блоке*/
+  align-items: center;
+  /*выравнивает строчку по одной линии*/
+  justify-content: space-between;
+  /* justify-conten разрабрасывает лого, поиск, кнопки, чтобы было красиво*/
+  padding-top: 45px;
+  margin-bottom:30%;
+
+}
+.logo
+{
+font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 28px;
+}
+.search{
+  display: flex;
+  align-items: center;
+  flex: 0.8;
+}
+.search-input
+{
+  flex:1;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 5px;
+  /* Border-radius это скругление поисковика*/
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border: none;
+  /*Border none убирает рамку, которая ограничивает поисковик по бокам*/
+  color: #AEAEAE;
+  font-size: 14px;
+  line-height: 16px;
+}
+  ::-webkit-input-placeholder { /* Chrome */
+    color: #AEAEAE;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #AEAEAE;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #AEAEAE;
+    opacity: 1;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: #AEAEAE;
+    opacity: 1;
+}
+.search-button
+{
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+
+}
+.bookmark
+{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+.user
+{
+  display: flex;
+  align-items: center;
+}
+.avatar{
+  margin-left: 20px;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  /*border-radius нужен для создания круга с авкой*/
+  /* object-fit нужен для нормального отображения авки*/
+  object-fit: cover;
+}
+.title
+{
+  margin: 0;
+  font-family: 'Source Sans Pro', serif;
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 7px;
+}
+.title-en
+{
+  display: inline-block;
+  font-size: 20px;
+  line-height: 23px;
+  color:#787878;
+  margin-bottom: 38px;
+}
+.info
+{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-bottom:100px;
+}
+.movie-info
+{
+  display: flex;
+  align-items:center;
+}
+.tag
+{
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+.country
+{
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 33px;
+}
+a.play
+{
+  display: flex;
+  align-items:center;
+  font-size:16px;
+  line-height:19px;
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+/*.play:before - это псевдоэлемент, который нужен к примеру для создания визуальной кнопки для сайта*/
+.play:before
+{
+  display: inline-block;
+  content:'';
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-repeat:no-repeat;
+  background-size: 100% ;
+  margin-right: 15px;
+}
+a.more
+{
+  display: flex;
+  align-items:center;
+  font-size:16px;
+  line-height:19px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.more:after
+{
+  display: inline-block;
+  content:'';
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-repeat:no-repeat;
+  background-size: 100%;
+  margin-left: 15px;
+  /*Свойство rotate переворачивает картинку в нужном направлении. В скобка указываем градус, например 90deg. Deg - degrees/градус*/
+  transform: rotate(90deg);
+}
+.content
+{
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 3px;
+  color:black;
+  padding: 43px 50px;
+  padding: 3% 4%;
+}
+.short-info
+{
+  margin-right: 1%;
+}
+.poster
+{
+  display: block;
+  margin-top: -40%;
+  margin-bottom : 20px;
+}
+.button
+{
+  background: #FF8F27;
+  padding: 10px 41px; /*Я уменьшил ширину с 44px на 41, так как на full-hd мониторе она выходит за правую границу постера*/
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 16px;
+  border:none;
+}
+.actors-title
+{
+  padding-left:15px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom:10px;
+}
+.actors-list
+{
+  margin:0;
+  list-style: none;
+  padding-left: 15px;
+  text-decoration: underline;
+  line-height:150%;
+
+}
+.full-info
+{
+  flex: 0.97;
+}
+.full-content
+{
+  /*Опять же, применяю свойство margin top на 20 px из-за проблемы отображения на 1920 x 1080. Теперь выглядит все как на макете*/
+  margin-top: 20px;
+  display:flex;
+  justify-content: space-between;
+}
+.tabs-content
+{
+  display: none;
+  margin-right: 70px;
+  margin-top: 20px;
+ }
+ .visible
+ {
+   display: block;
+ }
+ .tabs
+ {
+  display:flex;
+  align-items:center;
+  margin-bottom: 4%;
+ }
+.tabs-item
+{
+  color:black;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 18px;
+  line-height:21px;
+}
+.tabs-item:not(:last-child)
+{
+  margin-right: 4%;
+}
+.tabs-item-active
+{
+  color: #FF8F27;
+  margin-right: 30px;
+}
+/*margin-right 30px. Почему? Дело в том, что мое разрешение переносит последний блок "Сайты" ниже блока "Описание". Чтобы решить проблему, я уменьшил расстояние между блоками до 30px*/
+.text
+{
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 0;
+}
+.subscribe-title
+{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 14px;
+  margin-top:10;
+}
+.subscribe-input
+{
+  width: 100%;
+  background: rgba(196, 196, 196, 0.5);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border: none;
+  color: #AEAEAE;
+  font-size: 14px;
+  line-height: 16px;
+}
+.subscribe-form
+{
+  position: relative;
+  margin-bottom: 48px;
+}
+.subscribe-button
+{
+  position: absolute;
+  background: #FF8F27;
+  border-radius: 0px 5px 5px 0px;
+  border:none;
+  padding:12px;
+  top:0;
+  right:0;
+  width: 43.5px;
+  height: 40px;
+  background-image:url(../img/check.png);
+  background-repeat:no-repeat;
+  background-position: center;
+}
+/*Медия запросы для планшетов/маленьких экранов. Адаптация сайта под их разрешения*/
+@media(max-width:1200px){
+.container
+ {
+   max-width: 950px;
+ }
+ .tabs-item
+ {
+   font-size: 16px;
+ }
+}
+@media(max-width:992px){
+  .container
+  {
+    max-width: 740px;
+  }
+  .tabs
+  {
+    flex-wrap: wrap;
+      }
+      .tabs-item
+      {
+        flex-basis:20%;
+        line-height: 2;
+      }
+      .full-content
+      {
+        flex-wrap: wrap;
+      }
+      .tabs-content
+      {
+        margin-bottom:5%;
+      }
+      .actors-list
+      {
+        font-size: 14px;
+      }
+}
+@media(max-width:768px){
+  .container
+  {
+    max-width: 540px;
+  }
+  .more
+  {
+    display: none;
+  }
+  .tabs-item
+  {
+    flex-basis: 33%;
+  }
+  .tabs-content
+  {
+    margin-right: 0;
+  }
+}
+/*Медия запросы под экраны телефонов*/
+@media(max-width:578px){
+  .container
+  {
+    width: 90%;
+  }
+  .header
+  {
+    flex-wrap: wrap;
+  }
+  .search
+  {
+    flex-basis: 100%;
+    order:3;
+    margin-top:5%;
+  }
+  .content
+  {
+    flex-wrap: wrap;
+  }
+  .actors-list, .actors-title
+  {
+    display: none;
+  }
+  .short-info
+  {
+    margin-bottom:5%;
+  }
+  .movie-info
+  {
+    flex-wrap: wrap;
+  }
+  .play
+  {
+    flex-basis: 100%;
+    margin-top: 10%;
+  }
+  .short-info
+  {
+    margin-right: 0;
+  }
+  .button
+  {
+    width: 100%;
+  }
+  .poster
+  {
+    margin-top: -20%;
+    display: inline-block;
+    width: 100%;
+  }
+  
+}
